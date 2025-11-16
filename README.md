@@ -79,15 +79,15 @@ Access Project at: **[http://127.0.0.1:8000/](http://127.0.0.1:8000/)**
 #### Windows (CMD/PowerShell):
 
 ```bash
-set EMAIL_USER="your_email@gmail.com" Go to -> `Inner directory of settings.py` line **148** Add you mail.
-set EMAIL_PASS="your_app_password"  Go to -> 'Inner directory of settings.py` line **149** Add you app password of mail.
+set EMAIL_USER="your_email@gmail.com" Go to -> `Inner directory of settings.py` line **138** Add you mail.
+set EMAIL_PASS="your_app_password"  Go to -> 'Inner directory of settings.py` line **139** Add you app password of mail.
 ```
 
 #### Linux/macOS (Bash/Zsh):
 
 ```bash
-set EMAIL_USER="your_email@gmail.com" Go to -> `Inner directory of settings.py` line **148** Add you mail.
-set EMAIL_PASS="your_app_password"  Go to -> 'Inner directory of settings.py` line **149** Add you app password of mail.
+set EMAIL_USER="your_email@gmail.com" Go to -> `Inner directory of settings.py` line **138** Add you mail.
+set EMAIL_PASS="your_app_password"  Go to -> 'Inner directory of settings.py` line **139** Add you app password of mail.
 ```
 
 ### Step 3 – Set Email in `views.py`
