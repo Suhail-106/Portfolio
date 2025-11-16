@@ -89,7 +89,7 @@ def login_user(request):
                 send_mail(
                     subject="Your OTP Code",
                     message=f"Hello {user.username},\n\nYour One-Time Password (OTP) is: {otp}\n\nPlease do not share this code with anyone.",
-                    from_email='companypvtltd34@gmail.com',
+                    from_email='', # add your mail
                     recipient_list=[user.email],
                     fail_silently=False,
                 )
@@ -133,7 +133,7 @@ def verify_otp(request):
                 mail = EmailMessage(
                     subject='✅ Your file is ready to download',
                     body=f"Hello {user.username if user.is_authenticated else 'User'},\n\nYour OTP verification was successful!\nPlease find your file attached below.\n\nThank you!",
-                    from_email='companypvtltd34@gmail.com',
+                    from_email='',Add your mail
                     to=[email],
                 )
                 mail.attach_file(file_path)  # ✅ attach the file
