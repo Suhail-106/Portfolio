@@ -1,0 +1,561 @@
+{% load static %}
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <!-- Using Local Tailwind Output -->
+    <link href="{% static 'output.css' %}" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/ede47d886a.js" crossorigin="anonymous"></script>
+
+</head>
+<body class="bg-slate-100 text-black dark:bg-gray-900 dark:text-white transition-colors duration-300">
+
+    <!-- Navbar (Hide under 430px) -->
+    <div class=" sticky top-0 flex max-[430px]:flex-wrap justify-between px-6 py-4 w-full bg-gray-200 dark:bg-gray-800 z-10">
+        <h2 class="font-bold text-xl max-[430px]:hidden ">Portfolio</h2>
+        
+         <div id="navbar" class="flex gap-6">
+             <a href="#home" class="nav-link pb-1">Home</a>
+             <a href="#about" class="nav-link pb-1">About</a>
+             <a href="#skills" class="nav-link pb-1">Skills</a>
+             <a href="#projects" class="nav-link pb-1">Projects</a>
+             <a href="#contact" class="nav-link pb-1">Contact</a>
+        </div>
+       
+    </div>
+        <h2 class="font-bold text-xl text-center py-2">Portfolio</h2>
+
+  
+  
+    <section id="home">
+    <div class="max-[430px]:hidden p-4 flex w-full h-[85%] gap-4">
+        <div class=" h-full w-full px-10 pl-60 py-20 ">
+          <h2 class="text-5xl font-bold py-5 text-green-600"> Full-Stack <br> Developer</h2><br>
+          <h2 class="py-4">Building digital experience that merge creativity with <br>technology</h2>
+          <h2 class="py-4">Specializing in modern web development and using modern <br> techniques</h2>
+          <button class="py-4 bg-green-600 text-white p-4 rounded-2xl hover:bg-green-500">Let's connect</button>
+          <h2 class="[&>a>i]:py-4 py-6 [&>a>i]:px-4 [&>a>i]:rounded-xl [&>a>i:hover]:bg-blue-600">
+              <a href="https://github.com/Suhail-106/amazone-clone"><i class="fa-brands fa-github"></i></a> 
+              <a href="https://x.com/Sikande77988229?t=rCPu5ETDGLkfVVARUrvncQ&s=09"><i class="fa-brands fa-square-x-twitter"></i></a> 
+              <a href="https://www.linkedin.com/in/suhail-hasan-b842a1197/"><i class="fa-brands fa-linkedin"></i></a>
+          </h2>
+        </div>
+        <div class="h-full w-full p-20 px-40 ">
+            <div class="bg-red-600 h-full w-full rounded-full"></div>
+        </div>
+    </div>
+</section>
+    <!---430px ke neeche mobile ke liye -->
+     <div class="min-[430px]:hidden p-4 w-full gap-4 ">
+        <div class="h-auto w-full px-5 ">
+            <div class="bg-red-600 h-70 w-full rounded-full"></div>
+        </div>
+        <div class="h-130 w-full px-10">
+          <h2 class="text-5xl font-bold py-5 text-green-600"> Full-Stack <br> Developer</h2><br>
+          <h2 class="py-4">Building digital experience that merge creativity with <br>technology</h2>
+          <h2 class="py-4">Specializing in modern web development and using modern <br> techniques</h2>
+          <button class="py-4 bg-green-600 text-white p-4 rounded-2xl hover:bg-green-500"
+          onclick="window.location.href='{% static 'files/welcome.pdf' %}'">Let's connect</button>
+
+          <h2 class="[&>a>i]:py-4 py-6 [&>a>i]:px-4 [&>a>i]:rounded-xl [&>a>i:hover]:bg-blue-600">
+              <a href="https://github.com/Suhail-106/amazone-clone"><i class="fa-brands fa-github"></i></a> 
+              <a href="https://x.com/Sikande77988229?t=rCPu5ETDGLkfVVARUrvncQ&s=09"><i class="fa-brands fa-square-x-twitter"></i></a> 
+              <a href="https://www.linkedin.com/in/suhail-hasan-b842a1197/"><i class="fa-brands fa-linkedin"></i></a>
+          </h2>
+        </div> 
+     </div>
+    
+     <section id="about">
+     <div class="max-[430px]:hidden w-full h-[90%]">
+        <h2 class="underline text-blue-600 text-center font-bold text-2xl">About</h2>
+        <div class="w-full h-[90%] flex gap-5">
+            <div class="w-1/2 p-10 px-20 pl-80">
+                <div class="h-full bg-red-800 rounded-xl"></div>
+            </div>
+            <div class="w-1/2  px-10 pr-40 py-50">
+                <div class="h-full rounded-xl">
+                    <h2 class="text-4xl font-bold py-2">Hello</h2>
+                    <h2 class="text-2xl font-bold py-2">I'm Suhail Hasan</h2>
+                    <h2>Lorem ipsum dolor sit amet Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo incidunt a asperiores qui
+                         aliquam corrupti officiis dolores aut. Magni voluptas vel molestias libero at beatae tempore repudiandae ea necessitatibus odit.
+                         consectetur adipisicing elit. Voluptate aspernatur provident, saepe laborum eveniet aliquam nesciunt.
+                         Vel explicabo sunt molestias quam nihil ullam ipsa, expedita exercitationem, voluptas perferendis hic pariatur! </h2>
+                </div>
+
+            </div>
+        </div>
+     </div>
+    </section>
+     <!----430px ke neeche mobile ke liye-->
+      <div class="min-[430px]:hidden w-full h-auto ">
+        <h2 class="underline text-blue-600 text-center font-bold text-2xl">About</h2>
+        <div class="w-full h-auto ">
+            <div class="w-full p-10 ">
+                <div class="w-full h-70 bg-red-800 rounded-xl"></div>
+            </div>
+
+            <div class="w-full p-2 h-92">
+                <div class="h-full rounded-xl">
+                    <h2 class="text-4xl font-bold py-2">Hello</h2>
+                    <h2 class="text-2xl font-bold py-2">I'm Suhail Hasan</h2>
+                    <h2>Lorem ipsum dolor sit amet Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo incidunt a asperiores qui
+                         aliquam corrupti officiis dolores aut. Magni voluptas vel molestias libero at beatae tempore repudiandae ea necessitatibus odit.
+                         consectetur adipisicing elit. Voluptate aspernatur provident, saepe laborum eveniet aliquam nesciunt.
+                         Vel explicabo sunt molestias quam nihil ullam ipsa, expedita exercitationem, voluptas perferendis hic pariatur! </h2>
+                </div>
+            </div>
+
+        </div>
+     </div>
+
+    <section id="skills">
+      <div class="w-full h-auto max-[430px]:py-10  max-[430px]:hidden">
+          <h2 class="underline text-blue-600 text-center font-bold text-2xl">skills</h2>
+          <div class="flex gap-5 w-full h-auto ">
+              <div class="w-1/2 h-full p-10 max-[430px]:p-1 [&>h2]:dark:bg-slate-800 [&>h2:hover]:bg-slate-400 [&>h2:hover]:text-white ">
+              
+                  <h3 class="font-bold text-2xl py-4">Profesional Skills</h3>
+                  <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus aperiam maiores voluptatum 
+                      fugiat hic provident ut? Deleniti debitis consequatur adipisci impedit voluptas corrupti animi.
+                      Quo facilis qui omnis eos natus.
+                      <hr>
+                  </h3>
+                  <h3 class="py-4 font-semibold text-xl text-center border-b-3 w-70 border-blue-600">Frontend development Skills</h3>
+                <h2 class="bg-white p-4 m-2 relative font-bold rounded shadow">
+                    <span class="bg-blue-600 px-1 text-xl text-white rounded"><i class="fa-brands fa-html5"></i></span>
+                      <span class="px-2 ">HTML 5</span>  
+                    <span class="float-right">95%</span>
+
+                     <!-- Underline only 95% width -->
+                    <div class="absolute left-0 bottom-0 h-[3px] bg-blue-500" style="width: 95%;"></div>
+                </h2>
+
+                   <h2 class="bg-white p-4 m-2 relative font-bold rounded shadow">
+                      <span class=" bg-blue-600 px-1 rounded text-xl text-white"><i class="fa-brands fa-css3-alt"></i></span>
+                        <span class="px-2 ">CSS3</span> 
+                      <span class="float-right">90%</span>
+
+                     <!-- Underline only 95% width -->
+                    <div class="absolute left-0 bottom-0 h-[3px] bg-blue-500" style="width: 90%;"></div>
+                </h2>
+
+                <h2 class="bg-white p-4 m-2 relative font-bold rounded shadow">
+                      <span class=" bg-blue-600 px-1 rounded text-xl text-white"><i class="fa-brands fa-css3-alt"></i></span>
+                        <span class="px-2 ">TAILWIND CSS</span> 
+                      <span class="float-right">85%</span>
+
+                     <!-- Underline only 95% width -->
+                    <div class="absolute left-0 bottom-0 h-[3px] bg-blue-500" style="width: 85%;"></div>
+                </h2>
+
+                 <h2 class="bg-white p-4 m-2  relative font-bold rounded shadow ">
+                      <span class=" bg-blue-600 px-1 rounded text-xl text-white"><i class="fa-brands fa-js"></i></span>
+                        <span class="px-2 ">JAVASCRIPT</span> 
+                      <span class="float-right">65%</span>
+
+                     <!-- Underline only 95% width -->
+                    <div class="absolute left-0 bottom-0 h-[3px] bg-blue-500" style="width: 65%;"></div>
+                </h2>
+
+                 <h2 class="bg-white p-4 m-2 relative font-bold rounded shadow">
+                      <span class=" bg-blue-600 px-1 rounded text-xl text-white"><i class="fa-solid fa-pen-fancy"></i></span>
+                        <span class="px-2 ">UX/UI</span> 
+                      <span class="float-right">85%</span>
+
+                     <!-- Underline only 95% width -->
+                    <div class="absolute left-0 bottom-0 h-[3px] bg-blue-500" style="width: 85%;"></div>
+                </h2>
+              
+                <h3 class="py-4 font-semibold text-xl text-center border-b-3 w-70 border-blue-600">Backened development Skills</h3>
+
+              
+                 <h2 class="bg-white p-4 m-2 relative font-bold rounded shadow">
+                      <span class=" bg-blue-600 px-1 rounded text-xl text-white"><i class="fa-brands fa-python"></i></span>
+                        <span class="px-2 ">PYTHON</span> 
+                      <span class="float-right">70%</span>
+
+                     <!-- Underline only 95% width -->
+                    <div class="absolute left-0 bottom-0 h-[3px] bg-blue-500" style="width: 70%;"></div>
+                </h2>
+
+                 <h2 class="bg-white p-4 m-2 relative font-bold rounded shadow">
+                      <span class=" bg-blue-600 px-1 rounded text-xl text-white"><i class="fa-brands fa-phoenix-framework"></i></span>
+                        <span class="px-2 ">DJANGO</span> 
+                      <span class="float-right">75%</span>
+
+                     <!-- Underline only 95% width -->
+                    <div class="absolute left-0 bottom-0 h-[3px] bg-blue-500" style="width: 75%;"></div>
+                </h2>
+
+                 <h2 class="bg-white p-4 m-2 relative font-bold rounded shadow">
+                      <span class=" bg-blue-600 px-1 rounded text-xl text-white"><i class="fa-solid fa-database"></i></span>
+                        <span class="px-2 ">MYSQL</span> 
+                      <span class="float-right">80%</span>
+
+                     <!-- Underline only 95% width -->
+                    <div class="absolute left-0 bottom-0 h-[3px] bg-blue-500" style="width: 80%;"></div>
+                </h2>
+
+            </div>
+            <div class="w-1/2 h-[80%] py-10">
+                <div class="w-full h-100 py-20">
+                    <img class="w-full h-90 rounded" 
+                    src="https://thumbs.dreamstime.com/b/business-technology-concepts-digital-lifestyle-working-outside-office-woman-hands-typing-laptop-computer-blank-screen-105178289.jpg" alt="">
+                </div>
+
+                 <div class="w-full h-100 py-20 ">
+                    <img class="w-full h-90 rounded" 
+                    src="https://f.hubspotusercontent10.net/hubfs/6448316/web-programming-languages.jpg" alt="">
+                </div>
+            </div>
+
+         </div>
+      </div>
+      <!-------------------------------430px ke neeche--------------------------------------------------------->
+      <div class="w-full h-auto  min-[430px]:hidden">
+          <h2 class="underline text-blue-600 text-center font-bold text-2xl">skills</h2>
+          <div class="flex flex-wrap  w-full h-auto px-2 ">
+             <div class="w-full max-[430px]:p-1 [&>h2]:dark:bg-slate-800 [&>h2:hover]:bg-slate-400 [&>h2:hover]:text-white"> 
+                   <h3 class="font-bold text-2xl py-4">Profesional Skills</h3>
+                  <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus aperiam maiores voluptatum 
+                      fugiat hic provident ut? Deleniti debitis consequatur adipisci impedit voluptas corrupti animi.
+                      Quo facilis qui omnis eos natus.
+                      <hr>
+                  </h3>
+                  <h3 class="py-4 font-semibold text-xl text-center border-b-3 w-70 border-blue-600">Frontend development Skills</h3>
+
+                <h2 class="bg-white p-4 m-2 relative font-bold rounded shadow">
+                    <span class="bg-blue-600 px-1 text-xl text-white rounded"><i class="fa-brands fa-html5"></i></span>
+                      <span class="px-2 ">HTML 5</span>  
+                    <span class="float-right">95%</span>
+
+                     <!-- Underline only 95% width -->
+                    <div class="absolute left-0 bottom-0 h-[3px] bg-blue-500" style="width: 95%;"></div>
+                </h2>
+
+                   <h2 class="bg-white p-4 m-2 relative font-bold rounded shadow">
+                      <span class=" bg-blue-600 px-1 rounded text-xl text-white"><i class="fa-brands fa-css3-alt"></i></span>
+                        <span class="px-2 ">CSS3</span> 
+                      <span class="float-right">90%</span>
+
+                     <!-- Underline only 95% width -->
+                    <div class="absolute left-0 bottom-0 h-[3px] bg-blue-500" style="width: 90%;"></div>
+                </h2>
+
+                <h2 class="bg-white p-4 m-2 relative font-bold rounded shadow">
+                      <span class=" bg-blue-600 px-1 rounded text-xl text-white"><i class="fa-brands fa-css3-alt"></i></span>
+                        <span class="px-2 ">TAILWIND CSS</span> 
+                      <span class="float-right">85%</span>
+
+                     <!-- Underline only 95% width -->
+                    <div class="absolute left-0 bottom-0 h-[3px] bg-blue-500" style="width: 85%;"></div>
+                </h2>
+
+                 <h2 class="bg-white p-4 m-2  relative font-bold rounded shadow ">
+                      <span class=" bg-blue-600 px-1 rounded text-xl text-white"><i class="fa-brands fa-js"></i></span>
+                        <span class="px-2 ">JAVASCRIPT</span> 
+                      <span class="float-right">65%</span>
+
+                     <!-- Underline only 95% width -->
+                    <div class="absolute left-0 bottom-0 h-[3px] bg-blue-500" style="width: 65%;"></div>
+                </h2>
+
+                 <h2 class="bg-white p-4 m-2 relative font-bold rounded shadow">
+                      <span class=" bg-blue-600 px-1 rounded text-xl text-white"><i class="fa-solid fa-pen-fancy"></i></span>
+                        <span class="px-2 ">UX/UI</span> 
+                      <span class="float-right">85%</span>
+
+                     <!-- Underline only 95% width -->
+                    <div class="absolute left-0 bottom-0 h-[3px] bg-blue-500" style="width: 85%;"></div>
+                </h2>
+                 <div class="w-full h-70">
+                    <img class="w-full h-70 rounded" 
+                    src="https://thumbs.dreamstime.com/b/business-technology-concepts-digital-lifestyle-working-outside-office-woman-hands-typing-laptop-computer-blank-screen-105178289.jpg" alt="">
+                </div>
+                </div>
+
+              <div class="w-full h-full p-10 max-[430px]:p-1 [&>h2]:dark:bg-slate-800 [&>h2:hover]:bg-slate-400 [&>h2:hover]:text-white">
+                <h3 class="py-4 font-semibold text-xl text-center border-b-3 w-70 border-blue-600">Backened development Skills</h3>
+
+                 <h2 class="bg-white p-4 m-2 relative font-bold rounded shadow">
+                      <span class=" bg-blue-600 px-1 rounded text-xl text-white"><i class="fa-brands fa-python"></i></span>
+                        <span class="px-2 ">PYTHON</span> 
+                      <span class="float-right">70%</span>
+
+                     <!-- Underline only 95% width -->
+                    <div class="absolute left-0 bottom-0 h-[3px] bg-blue-500" style="width: 70%;"></div>
+                </h2>
+
+                 <h2 class="bg-white p-4 m-2 relative font-bold rounded shadow">
+                      <span class=" bg-blue-600 px-1 rounded text-xl text-white"><i class="fa-brands fa-phoenix-framework"></i></span>
+                        <span class="px-2 ">DJANGO</span> 
+                      <span class="float-right">75%</span>
+
+                     <!-- Underline only 95% width -->
+                    <div class="absolute left-0 bottom-0 h-[3px] bg-blue-500" style="width: 75%;"></div>
+                </h2>
+
+                 <h2 class="bg-white p-4 m-2 relative font-bold rounded shadow">
+                      <span class=" bg-blue-600 px-1 rounded text-xl text-white"><i class="fa-solid fa-database"></i></span>
+                        <span class="px-2 ">MYSQL</span> 
+                      <span class="float-right">80%</span>
+
+                     <!-- Underline only 95% width -->
+                    <div class="absolute left-0 bottom-0 h-[3px] bg-blue-500" style="width: 80%;"></div>
+                </h2>
+              <div class="w-full h-70 ">
+                    <img class="w-full h-70 rounded" 
+                    src="https://f.hubspotusercontent10.net/hubfs/6448316/web-programming-languages.jpg" alt="">
+                </div>
+            </div>
+
+         </div>
+      </div>
+    </section>
+
+
+
+<section id="projects" >
+<div class="w-full h-auto max-[430px]:py-5" >
+        <h2 class="underline text-blue-600 text-center font-bold text-2xl">Projects</h2>
+    
+    <div class="flex gap-20 px-20 py-10 max-[430px]:px-2 max-[430px]:py-2 max-[430px]:gap-2 max-[430px]:flex-wrap ">
+          <div onclick="window.location.href='{% url 'facebook' %}'"
+              class="w-1/3 max-[430px]:w-full h-150 p-4 rounded transition-transform duration-75 ease-in-out hover:scale-105 dark:bg-slate-800 bg-white shadow">
+        <h2 class="text-center text-xl font-serif underline">Facebook clone</h2>
+
+           <div class="w-full h-75 p-7">
+              <img class="w-full h-full rounded-2xl" src="{% static 'images/facebook.png' %}" alt="">       
+           </div> 
+
+          <div class="w-full h-70 [&>h2]:leading-2.2 [&>h2]:font-semibold">
+
+            <h2>Project: Facebook-Clone best look for UI(user interface) </h2>
+            <h2>Web Application (Facebook Inspired)</h2>
+            <h2>Facebook-style UI using languages (Frontend)</h2>
+            <h2>Short Project Description: </h2>
+            <h3>A lightweight Facebook-like UI implemented entirely with frontend technologies (HTML, CSS, JavaScript). Uses a single-page architecture: many “pages” are routed and shown within one HTML shell using JS-driven navigation and smooth animated transitions.</h3>
+
+          </div>
+
+        </div>
+        
+      <div onclick="window.location.href='https://github.com/Suhail-106/CCTV'" class="w-1/3 max-[430px]:w-full h-150 p-4 rounded transition-transform duration-75 ease-in-out hover:scale-105 dark:bg-slate-800 bg-white shadow">
+        <h2 class="text-center text-xl font-serif underline">CCTV project</h2>
+        <div class="w-full h-75 p-7">
+              <img class="w-full h-full rounded-2xl" src="{% static 'images/CCTV.png' %}" alt="">       
+           </div> 
+
+          <div class="w-full h-70 [&>h2]:leading-2.2 [&>h2]:font-semibold">
+
+            <h2>Project: CCTV work is Full Stack E-Commerce Web App </h2>
+            <h2> E-commerce Web Application</h2>
+            <h2>style servicing Platform</h2>
+            <h2>Profile making with show</h2>
+            <h2>Profile Editing</h2>
+            <h2>Short Project Description: </h2>
+            <h3>A full-stack e-commerce web application inspired by CCTV work, and with authentication and OTP-based login using Django</h3>
+
+          </div>
+
+        </div>
+          <div onclick="window.location.href='https://github.com/Suhail-106/amazone-dummy'" class="w-1/3 max-[430px]:w-full h-150 p-4 rounded transition-transform duration-75 ease-in-out hover:scale-105 dark:bg-slate-800 bg-white shadow">
+        <h2 class="text-center text-xl font-serif underline">Amazon dummy</h2>
+            <div class="w-full h-75 p-7">
+              <img class="w-full h-full rounded-2xl" src="{% static 'images/amazone.png' %}" alt="">       
+           </div> 
+          <div class="w-full h-70 [&>h2]:leading-2.2 [&>h2]:font-semibold">
+
+            <h2>Project: Amazone-Clone Full Stack E-Commerce Web App </h2>
+            <h2> E-commerce Web Application (Amazon Inspired)</h2>
+            <h2>Amazon-style Shopping Platform</h2>
+            <h2>Short Project Description: </h2>
+            <h3>A full-stack e-commerce web application inspired by Amazon, where users can browse products, add items to the cart, and place orders with authentication and OTP-based login using Django</h3>
+
+          </div>
+
+        </div>
+   </div>
+</div>
+</section>
+
+
+
+ 
+<section id="contact">
+<div class="w-full h-auto py-5">
+  <h2 class="underline text-blue-600 text-center font-bold text-2xl">Contacts</h2>
+ <!-- SIGNUP FORM -->
+    <form id="signupForm" action="{% url 'signup' %}" method="POST"
+          class="mx-auto w-80 h-auto bg-white dark:bg-slate-800 
+          [&>input]:dark:bg-slate-700 [&>input]:bg-slate-100 [&>input]:w-full [&>input]:mb-1 p-5 mt-4 rounded-xl shadow [&>input]:p-1"
+          style="display:block">
+      {% csrf_token %}
+      <label for="name">Name:- </label><br>
+      <input type="text" id="name" name="name" value="{{ request.POST.name }}"><br>
+      {% if errors.name %}<p style="color:red;">{{ errors.name }}</p>{% endif %}
+
+      <label for="email">Email:- </label><br>
+      <input type="email" name="email" id="email" value="{{ request.POST.email }}"><br>
+      {% if errors.email %}<p style="color:red;">{{ errors.email }}</p>{% endif %}
+
+      <label for="password">Create Password:</label><br>
+      <input type="password" name="password" id="password"><br>
+      {% if errors.password %}<p style="color:red;">{{ errors.password }}</p>{% endif %}
+
+      <label for="confirm_password">Confirm Password</label><br>
+      <input type="password" id="confirm_password" name="confirm_password"><br>
+      {% if errors.confirm_password %}<p style="color:red;">{{ errors.confirm_password }}</p>{% endif %}
+
+      <label for="message">Message:-</label><br>
+      <textarea name="message" id="message" cols="36" rows="6" class="bg-slate-100 dark:bg-slate-700">{{ request.POST.message }}</textarea><br><br>
+
+      <button type="submit" class="w-full bg-blue-500 hover:bg-blue-600 text-white p-1 rounded">
+        Submit
+      </button>
+      <a href="#" id="goToLogin">Already have an account? Login</a>
+
+
+    </form>
+
+  <form id="loginForm" method="POST" action="{% url 'login_view' %}" 
+      class="mx-auto w-80 h-auto bg-white p-5 mt-4 rounded-xl shadow [&>input]:bg-slate-100 [&>input]:w-full [&>input]:mb-1 [&>input]:p-1"
+      style="display:none">
+  {% csrf_token %}
+  <h3 class="text-center text-xl mb-3 font-bold text-blue-600">Login</h3>
+  {% if errors.Logincredential %}
+    <p style="color:red;">{{ errors.Logincredential }}</p>
+  {% endif %}
+  <input type="text" name="email" placeholder="Username/email" required><br><br>
+  <input type="password" name="password" placeholder="Password" required><br><br>
+  <button type="submit" class="w-full bg-blue-500 hover:bg-blue-600 text-white p-1 rounded">Login</button>
+</form>
+ 
+
+     <form id="verify_otp"  method="POST" action="{% url 'verify_otp' %}" class="w-80 [&>input]:w-full [&>input]:bg-slate-50 font-semibold [&>input]:border-2 [&>input]:border-transparent
+          [&>input:hover]:border-blue-500 [&>input]:rounded [&>input]:p-1 mx-auto rounded"
+          style="display:none">
+    {% csrf_token %}
+    <input type="text" name="otp" placeholder="Enter OTP">
+    <button type="submit">Verify</button>
+    
+   
+</form> 
+  <!-- ✅ Success Message Div -->
+  <div id="successDiv" style="display:none; text-align:center;">
+    <h2 style="color:green;">🎉 Account Verified Successfully!</h2>
+  </div>
+</section>
+ 
+<div class="w-full h-55 bg-slate-800">
+  <h2 class="bg-slate-700 text-center text-white py-2 hover:bg-slate-600" onclick="window.location.href='#home'">Back to top</h2>
+<h2 class="text-center text-white text-xl py-2">Suhail Hasan</h2>
+<h2 class="gap-4 flex text-white text-xl justify-center py-2">
+             <a href="https://github.com/Suhail-106/amazone-clone"><i class="fa-brands fa-github"></i></a> 
+              <a href="https://x.com/Sikande77988229?t=rCPu5ETDGLkfVVARUrvncQ&s=09"><i class="fa-brands fa-square-x-twitter"></i></a> 
+              <a href="https://www.linkedin.com/in/suhail-hasan-b842a1197/"><i class="fa-brands fa-linkedin"></i></a>
+</h2>
+<h2 class="text-center text-white text-xl py-2">
+  This is my portfolio index and here my resume →
+  <span>
+    <a href="{% static 'files/welcome.pdf' %}" download 
+       class="text-yellow-400 hover:underline text-md hover:text-yellow-300">
+      Download Resume
+    </a>
+  </span>
+</h2>
+
+<h2 class="text-center text-white">@Term and condition apply</h2>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ✅ JS for showing/hiding forms -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const signupForm = document.getElementById("signupForm");
+  const loginForm = document.getElementById("loginForm");
+  const verifyOtp = document.getElementById("verify_otp");
+  const successDiv = document.getElementById("successDiv");
+
+  {% if signup_success %}
+    signupForm.style.display = "none";
+    loginForm.style.display = "block";
+    verifyOtp.style.display = "none";
+    successDiv.style.display = "none";
+    alert("🎉 Signup successful! Please login now.");
+    window.location.hash = '#contact';
+  {% elif login_success %}
+    signupForm.style.display = "none";
+    loginForm.style.display = "none";
+    verifyOtp.style.display = "block";
+    successDiv.style.display = "none";
+    alert("📩 OTP sent! Please verify.");
+    window.location.hash = '#contact';
+  {% elif otp_success %}
+    signupForm.style.display = "none";
+    loginForm.style.display = "none";
+    verifyOtp.style.display = "none";
+    successDiv.style.display = "block";
+    window.location.hash = '#contact';
+
+  {% endif %}
+});
+
+const goToLogin = document.getElementById("goToLogin");
+
+if (goToLogin) {
+  goToLogin.addEventListener("click", (e) => {
+    e.preventDefault();
+    signupForm.style.display = "none";
+    loginForm.style.display = "block";
+    verifyOtp.style.display = "none";
+    successDiv.style.display = "none";
+  });
+}
+
+</script>
+
+
+
+
+
+
+
+
+
+
+     <script>
+    const sections = document.querySelectorAll("section");
+    const navLinks = document.querySelectorAll(".nav-link");
+
+    window.addEventListener("scroll", () => {
+        let current = "";
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop - 100;
+            if (pageYOffset >= sectionTop) {
+                current = section.getAttribute("id");
+            }
+        });
+
+        navLinks.forEach(link => {
+            link.classList.remove("border-b-3", "border-blue-500");
+            if (link.getAttribute("href") === "#" + current) {
+                link.classList.add("border-b-3", "border-blue-500");
+            }
+        });
+    });
+</script>
+</body>
+</html>

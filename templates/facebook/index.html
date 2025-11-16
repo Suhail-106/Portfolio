@@ -1,0 +1,1192 @@
+{% load static %}
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Dark theme and light theme</title>
+	<link rel="stylesheet" href="{% static 'facebook/darktheme.css' %}">
+	<script src="https://kit.fontawesome.com/ede47d886a.js" crossorigin="anonymous"></script>
+	<script src="{% static 'facebook/darktheme.js' %}"></script>
+	<style type="text/css">
+		.container1{width: 0%; overflow: scroll; position: fixed; background-color: white; color: black; height: 0vh; transform: translateX(0%); transition: all 1s ease-in-out; border-radius: 1vw; top: 10%; box-shadow: 1px 1px 10px black; display: flex; justify-content: center; align-items: center;
+      z-index: 1; }
+
+		.container1.active{transform: translateX(0); top: 11%; width: 30vw; height: 87vh;}
+        .container1.active-theme{background-color:rgba(0, 0, 0, 0.8) ; color: white;}
+
+.container1::-webkit-scrollbar {display: none;/*Scrollbar ko chhupa dega*/}
+		.sidebar{padding: 1vw; margin-top: 5%;  transition: all 1s ease-in-out;height: 86vh;}
+	  
+		.menubar ul{list-style-type: none; padding: 1vw;}
+		.menubar li{padding: 0.1vw; border-radius: 0.5vw; font-size: 1.5vw;}
+		.menubar i{padding: 1vw;}
+		.menubar li:hover{background-color: lightgray; color: black;}
+	.container ~ button{height: 10vh; width: 5vw; transition: all 0.1s ease-in-out; background-color: white; border-radius: 50%;}
+	.sidebar span{font-size: 2vw; padding: 1vw; cursor: pointer; color: red;font-weight: 800;}
+  .sidebar span:hover{ background-color: lightgray; border-radius: 50%;}
+		button.hidden {opacity: 0;visibility: hidden; /* Smoothly hide karega */}
+        .menubar .fa-brands {width: 5vw; font-size: 2vw; text-align: center;}
+        .sidebar h1{font-size: 3vw;}
+        .menubar hr{border:0.5px solid black;}
+        .menubar hr.active{border:0.5px solid white;}
+        .menubar a{color: black;}
+
+        @media screen and (max-width:430px)
+        {
+        	.container1{width: 0vw; height: 0vh; position: absolute; left: -100%;}
+        	.container1.active-theme{left: 0%; top: 14%;}
+        	.container1.active{transform: translateX(0); width: 100vw; height: 85vh;}
+            .container1 .sidebar span:first-child{font-size: 120%;}
+        	.sidebar{width: 97vw;}
+        	.menubar li{font-size: 4.5vw;}
+        	.sidebar h1{font-size: 8vw;}
+        	span{font-size: 8vw;}
+        	.menubar .fa-brands {width: 15vw; font-size: 8vw;}
+          .container ~ button{height: 5vh; width: 30vw;}
+        }
+  }
+		
+	</style>
+</head>
+<body id="body">
+<div class="containerM1">
+<div class="fbnsearchmedia430">
+				    <i><img src="https://png.pngtree.com/png-clipart/20230527/original/pngtree-s-logo-icon-png-image_9171884.png" width="7%"> </i>
+            <i class="fa-solid fa-bars" onclick="togglesidebar(),remove(),playSound(),containerR6toggle()"></i>
+            <i class="fa-solid fa-bell" onclick="Notification1T()"></i>
+            <i class="fa-solid fa-user-plus"></i>
+            <i class="fa-brands fa-facebook-messenger" onclick="container5tggl()" ></i>
+			</div>
+		</div>
+		<div class="containerM2">
+			<div class="HUfVMP">
+				 <i class="fa-solid fa-house" onclick="container6toggle(),UserContainer8R()" ></i>
+				 	<i class="fa-solid fa-users-between-lines" onclick="UserContainer8T()"></i>
+				 	<i class="fa-solid fa-users"onclick="container6toggle(),toggleRsidebar()" ></i>
+				 	<i class="fa-solid fa-store"></i>
+		</div>
+	</div>
+	<hr class="horizontalline1">
+	<div class="containerM3">
+		<div class="prIconwritevedio">
+			<img src="https://cdn-icons-png.flaticon.com/128/9131/9131529.png" width="7%">
+		<span><input type="text" placeholder="Write something here....."></span>
+			<img src="https://static.xx.fbcdn.net/rsrc.php/v4/y7/r/Ivw7nhRtXyo.png" width="7%">
+		</div>
+	</div>
+<div class="container3H">
+	<div class="navbarF1">
+		<div class="fbnsearch">
+      <img style="border-radius:50%;" src="https://static.vecteezy.com/system/resources/thumbnails/019/514/650/small/letter-s-logo-design-for-business-and-company-identity-with-luxury-concept-free-vector.jpg" width="150%" height="150%">  <input type="text" placeholder="Serch facebook"><span class="tooltip-text">Anything you want to search</span>
+		</div>
+		<div class="HUP">
+    <i class="fa-solid fa-house" onclick="containerR6toggle(),UserContainer8R()"><span class="tooltip-text1">Home</span></i>
+    <i class="fa-solid fa-users" onclick="container6toggle(),UserContainer8R()"><span class="tooltip-text2">
+    	friends
+    </span></i>
+    <i class="fa-solid fa-user" onclick="UserContainer8T(),containerR6toggle()"><span class="tooltip-text3">Users</span></i>
+		</div>
+		<div class="FMunMasNotP">
+      <input type="text" placeholder="Find friends" onclick="container6toggle()">
+    <i class="fa-solid fa-bars" onclick="togglesidebar(),remove(),playSound()"><span class="tooltip-text4">Menu</span></i>
+    <i class="fa-brands fa-facebook-messenger" onclick="container5tggl()"><span class="tooltip-text5">Massenger</span></i>
+    <i class="fa-solid fa-bell" onclick="subNotification1NotR(),subNotification3NotR(),Notification1T()"><span class="tooltip-text6">Notification</span></i>
+    <i class="fa-solid fa-user-plus"><span class="tooltip-text7">Account</span></i>
+		</div>
+	</div>
+</div>
+<div class="container6">
+	<div class="slider5">
+		 <p> &nbsp &nbsp &nbsp &nbsp &nbsp Friends</p>
+		 <h2><i class="fa-solid fa-arrow-left" onclick="sliderR5toggle()"></i> &nbsp  All friends</h2>
+		 <input type="search" placeholder=" 👓 Search Friends..">
+		 <hr>
+		 <h2><h3>Friends</h3><p>No friends to show</p></h2>
+	</div>
+	<div class="slider4">
+		  <p> &nbsp &nbsp &nbsp &nbsp &nbsp Friends</p>
+		  <h2><i class="fa-solid fa-arrow-left" onclick="sliderR4C6()"></i> &nbsp  Suggestion</h2>
+		  <p>People you may know</p>
+    <div class="subslider6">
+    	  <div class="profileC6"></div>
+      	<div class="profileC6-1">
+    		  <h3>Ahtisham Ulhaq <span> 5w</span></h3>
+    	  	<button class="btnC6" style="background-color:#008CBA; color:white;" >confirm</button><button class="btnC6-1" style="background-color:lightgray;">Delete</button>
+    	</div>
+    </div>
+    <div class="subslider7">
+    	  <div class="profileC7" style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9tu0c_cjxMIIll3_E23_TRiAGPLXAW5WJFg&s);"></div>
+      	<div class="profileC7-1">
+    		  <h3>Victoria <span> 5w</span></h3>
+    	  	<button class="btnC6" class="btnC6" style="background-color:#008CBA; color:white;">confirm</button><button class="btnC6-1" style="background-color:lightgray;">Delete</button>
+    	</div>
+    </div>
+    
+    <div class="subslider9">
+    	  <div class="profileC9" style="background-image: url(https://images.pexels.com/photos/1704488/pexels-photo-1704488.jpeg?cs=srgb&dl=pexels-sulimansallehi-1704488.jpg&fm=jpg);"></div>
+      	<div class="profileC9-1">
+    		  <h3>Devid <span> 5w</span></h3>
+    	  	<button class="btnC6" style="background-color:#008CBA; color:white;">confirm</button><button class="btnC6-1" style="background-color:lightgray;">Delete</button>
+    	</div>
+    </div> 
+    <div class="subslider10">
+    	  <div class="profileC10" style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNatPJ6cB-XkyGkyVj6QiL3WmSYZv4gUvzUw&s);"></div>
+      	<div class="profileC10-1">
+    		  <h3>Marshmallo <span> 5w</span></h3>
+    	  	<button class="btnC6" style="background-color:#008CBA; color:white;">confirm</button><button class="btnC6-1" style="background-color:lightgray;">Delete</button>
+    	</div>
+    </div> 
+
+    <div class="subslider11">
+    	  <div class="profileC11" style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLAJsFU2rMe_-oc9skexx0NO8ngMU_0dxO0w&s);"></div>
+      	<div class="profileC11-1">
+    		  <h3>Peter <span> 5w</span></h3>
+    	  	<button class="btnC6" style="background-color:#008CBA; color:white;">confirm</button><button class="btnC6-1" style="background-color:lightgray;">Delete</button>
+    	</div>
+    </div> 
+
+    <div class="subslider12">
+    	  <div class="profileC12" style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRX7mE71L-emwskhQFa2yTcbWgGL0qt7T292g&s);"></div>
+      	<div class="profileC12-1">
+    		  <h3>Megha <span> 5w</span></h3>
+    	  	<button class="btnC6" style="background-color:#008CBA; color:white;">confirm</button><button class="btnC6-1" style="background-color:lightgray;">Delete</button>
+    	</div>
+    </div> 
+
+    <div class="subslider13">
+    	  <div class="profileC13" style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXN4Q5H4qRhkXDIRQzuvpTxab_f1CM5k3xuw&s);"></div>
+      	<div class="profileC13-1">
+    		  <h3>Sneha <span> 5w</span></h3>
+    	  	<button class="btnC6" style="background-color:#008CBA; color:white;">confirm</button><button class="btnC6-1" style="background-color:lightgray;">Delete</button>
+    	</div>
+    </div>
+
+    <div class="subslider14">
+    	  <div class="profileC14" style="background-image: url(https://png.pngtree.com/thumb_back/fh260/background/20230612/pngtree-woman-in-a-dark-shade-wearing-sunglasses-image_2947457.jpg);"></div>
+      	<div class="profileC14-1">
+    		  <h3>Shilpi <span> 5w</span></h3>
+    	  	<button class="btnC6" style="background-color:#008CBA; color:white;">confirm</button><button class="btnC6-1" style="background-color:lightgray;">Delete</button>
+    	</div>
+    </div> 
+
+    <div class="subslider15">
+    	  <div class="profileC15" style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4vuB4BpxNmYYX5IX1hrYACQomq4oGS56sOA&s);"></div>
+      	<div class="profileC15-1">
+    		  <h3>Kahkasha <span> 5w</span></h3>
+    	  	<button class="btnC6" style="background-color:#008CBA; color:white;">confirm</button><button class="btnC6-1" style="background-color:lightgray;">Delete</button>
+    	</div>
+    </div> 
+
+    <div class="subslider16">
+    	  <div class="profileC16" style="background-image: url(https://i.pinimg.com/474x/69/2b/ac/692bac26e249abea3bddf4867ed76f94.jpg);"></div>
+      	<div class="profileC16-1">
+    		  <h3>Huma <span> 5w</span></h3>
+    	  	<button class="btnC6" style="background-color:#008CBA; color:white;">confirm</button><button class="btnC6-1" style="background-color:lightgray;">Delete</button>
+    	</div>
+    </div> 
+
+    <div class="subslider17">
+    	  <div class="profileC17" style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7maG_e4yixSnlAz5L4B0khkNgG9O2rD3_Kg&s);"></div>
+      	<div class="profileC17-1">
+    		  <h3>Araa pathan <span> 5w</span></h3>
+    	  	<button class="btnC6" style="background-color:#008CBA; color:white;">confirm</button><button class="btnC6-1" style="background-color:lightgray;">Delete</button>
+    	</div>
+    </div>
+
+	</div>
+	<div class="slider3">
+		<p> &nbsp &nbsp &nbsp &nbsp &nbsp Friends</p>
+		<h2><i class="fa-solid fa-arrow-left" onclick="sliderR3t()"></i> &nbsp  Friend request</h2>
+		<h3>1 friend request</h3>
+		<p style="color:blue;" onclick="sentrequestC6slider3()">veiw sent request</p>
+		<div class="sentrequest">
+			<h1>Sent Request<span onclick="sentrequestC6slider3()">&times</span></h1>
+			<hr>
+			<p>When you send someone a friend request, it will appear here.</p>
+		</div>
+    <div class="subslider6">
+    	<div class="profileC6"></div>
+    	<div class="profileC6-1">
+    		<h3>Ahtisham Ulhaq &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  5w</h3>
+    		<button class="btnC6" style="background-color:#008CBA; color:white;">confirm</button><button class="btnC6-1" style="background-color:lightgray;">Delete</button>
+    	</div>
+    </div>
+	</div>
+  <div class="slider2">
+  	<h1>Freinds<i class="fa-solid fa-gear" onclick="container6t()"></i></h1>
+  	<div class="settingofC6Fr">
+  		<h3>Notification settings <span onclick="container6t()">&times</span> </h3>
+  		<p>You can manage how you are notified about friends updates.</p>
+  		<hr>
+  		<h3><i style="float:none;" class="fa-solid fa-file"></i> show notification dots
+        <input id="checkboxofC6" type="checkbox" onclick="Container6()">
+  		</h3>
+  	</div>
+  	<hr>
+  	<h1>Home</h1>
+  	<hr>
+  	<h2 onclick="slider3t()"><i style="float:none;" class="fa-solid fa-user-group"></i> Friend request<i class="fa-solid fa-arrow-right"></i></h2>
+  	<h2 onclick="slider4C6()"><i style="float:none;" class="fa-solid fa-users" ></i> Suggesstion<i class="fa-solid fa-arrow-right"></i></h2>
+  	<h2 onclick="slider5toggle()"><i style="float:none;" class="fa-solid fa-user"></i> All friends<i class="fa-solid fa-arrow-right"></i></h2>
+
+  	<h2 onclick="birthdaysnone()"><i style="float:none;" class="fa-solid fa-cake-candles"></i> Birthdays<i id="angleDown1" class="fa-solid fa-angle-down"></i></h2>
+    <div id="Birthday1">
+    <i style="float:none;" class="fa-solid fa-cake-candles"></i>
+    <h4>When your Friends have birthdays, they will apear here.</h4>
+     </div>
+      <h2 onclick="customlists1()"><i style="float:none;" class="fa-solid fa-list"></i> Custom Lists<i class="fa-solid fa-angle-down"></i></h2>
+      <div class="customlists1">
+  	    <div class="subfindfriends2 Costm1">
+            <div class="subfindfriends2profile Img2"></div>
+            <div class="NamesubFriens2"><span>Arun sonkar</span></div>	
+            <div class="subfindfriends2Addfreinds">
+              <button class="btnC6-2">Confirm</button>
+              <button class="btnC6-3">Delete</button>
+            </div>
+        </div>
+
+        <div class="subfindfriends2 Costm1">
+            <div class="subfindfriends2profile Img3"></div>
+            <div class="NamesubFriens2"><span>Sonali bendre</span></div>	
+            <div class="subfindfriends2Addfreinds">
+              <button class="btnC6-2">Confirm</button>
+              <button class="btnC6-3">Delete</button>
+            </div>
+         </div>
+
+         <div class="subfindfriends2 Costm1">
+            <div class="subfindfriends2profile Img1"></div>
+            <div class="NamesubFriens2"><span>David dhawan</span></div>	
+            <div class="subfindfriends2Addfreinds">
+              <button class="btnC6-2">Confirm</button>
+              <button class="btnC6-3">Delete</button>
+            </div>
+      </div>
+
+      <div class="subfindfriends2 Costm1">
+            <div class="subfindfriends2profile Img4"></div>
+            <div class="NamesubFriens2"><span>Professor</span></div>	
+            <div class="subfindfriends2Addfreinds">
+              <button class="btnC6-2">Confirm</button>
+              <button class="btnC6-3">Delete</button>
+            </div>
+      </div>
+       <div class="subfindfriends2 Costm1">
+            <div class="subfindfriends2profile Img5"></div>
+            <div class="NamesubFriens2"><span>Kristen Stewert</span></div>	
+            <div class="subfindfriends2Addfreinds">
+              <button class="btnC6-2">Confirm</button>
+              <button class="btnC6-3">Delete</button>
+            </div>
+      </div>
+       <div class="subfindfriends2 Costm1">
+            <div class="subfindfriends2profile Img6"></div>
+            <div class="NamesubFriens2"><span>Maffallo</span></div>	
+            <div class="subfindfriends2Addfreinds">
+              <button class="btnC6-2">Confirm</button>
+              <button class="btnC6-3">Delete</button>
+            </div>
+      </div>
+       <div class="subfindfriends2 Costm1">
+            <div class="subfindfriends2profile Img7"></div>
+            <div class="NamesubFriens2"><span>Hena mam</span></div>	
+            <div class="subfindfriends2Addfreinds">
+              <button class="btnC6-2">Confirm</button>
+              <button class="btnC6-3">Delete</button>
+            </div>
+      </div>
+
+      <div class="subfindfriends2 Costm1">
+            <div class="subfindfriends2profile Img8"></div>
+            <div class="NamesubFriens2"><span>Vanky thakur</span></div>	
+            <div class="subfindfriends2Addfreinds">
+              <button class="btnC6-2">Confirm</button>
+              <button class="btnC6-3">Delete</button>
+            </div>
+      </div>
+
+     </div>
+  </div>
+  <div class="findfriends">
+    	<div class="subfindfriends1">
+         <h3>Friends request</h3>
+      </div>
+       <div class="subfindfriends2">
+            <div class="subfindfriends2profile"></div>
+            <div class="NamesubFriens2">Ahtisham Ulhaq</div>	
+            <div class="subfindfriends2Addfreinds">
+            <button class="btnC6-2">Confirm</button>
+            <button class="btnC6-3">Delete</button>
+          </div>
+      </div>
+      <hr>
+      <p>People you may know</p>
+   <div class="findfriends2">  
+      <div class="subfindfriends2">
+            <div class="subfindfriends2profile Img1"></div>
+            <div class="NamesubFriens2"><span>David dhawan</span></div>	
+            <div class="subfindfriends2Addfreinds">
+              <button class="btnC6-2">Confirm</button>
+              <button class="btnC6-3">Delete</button>
+            </div>
+      </div>
+      
+      <div class="subfindfriends2">
+            <div class="subfindfriends2profile Img2"></div>
+            <div class="NamesubFriens2"><span>Arun sonkar</span></div>	
+            <div class="subfindfriends2Addfreinds">
+              <button class="btnC6-2">Confirm</button>
+              <button class="btnC6-3">Delete</button>
+            </div>
+      </div>
+
+       <div class="subfindfriends2">
+            <div class="subfindfriends2profile Img3"></div>
+            <div class="NamesubFriens2"><span>Shonali bendre</span></div>	
+            <div class="subfindfriends2Addfreinds">
+              <button class="btnC6-2">Confirm</button>
+              <button class="btnC6-3">Delete</button>
+            </div>
+      </div>
+       <div class="subfindfriends2">
+            <div class="subfindfriends2profile Img4"></div>
+            <div class="NamesubFriens2"><span>Professor</span></div>	
+            <div class="subfindfriends2Addfreinds">
+              <button class="btnC6-2">Confirm</button>
+              <button class="btnC6-3">Delete</button>
+            </div>
+      </div>
+       <div class="subfindfriends2">
+            <div class="subfindfriends2profile Img5"></div>
+            <div class="NamesubFriens2"><span>Kristen Stewert</span></div>	
+            <div class="subfindfriends2Addfreinds">
+              <button class="btnC6-2">Confirm</button>
+              <button class="btnC6-3">Delete</button>
+            </div>
+      </div>
+       <div class="subfindfriends2">
+            <div class="subfindfriends2profile Img6"></div>
+            <div class="NamesubFriens2"><span>Maffallo</span></div>	
+            <div class="subfindfriends2Addfreinds">
+              <button class="btnC6-2">Confirm</button>
+              <button class="btnC6-3">Delete</button>
+            </div>
+      </div>
+       <div class="subfindfriends2">
+            <div class="subfindfriends2profile Img7"></div>
+            <div class="NamesubFriens2"><span>Hena mam</span></div>	
+            <div class="subfindfriends2Addfreinds">
+              <button class="btnC6-2">Confirm</button>
+              <button class="btnC6-3">Delete</button>
+            </div>
+      </div>
+       <div class="subfindfriends2">
+            <div class="subfindfriends2profile Img8"></div>
+            <div class="NamesubFriens2"><span>Vanky thakur</span></div>	
+            <div class="subfindfriends2Addfreinds">
+              <button class="btnC6-2">Confirm</button>
+              <button class="btnC6-3">Delete</button>
+            </div>
+      </div>
+       <div class="subfindfriends2">
+            <div class="subfindfriends2profile Img9"></div>
+            <div class="NamesubFriens2"><span>Ritik sawita</span></div>	
+            <div class="subfindfriends2Addfreinds">
+              <button class="btnC6-2">Confirm</button>
+              <button class="btnC6-3">Delete</button>
+            </div>
+      </div>
+       <div class="subfindfriends2">
+            <div class="subfindfriends2profile Img10"></div>
+            <div class="NamesubFriens2"><span>Prince kumar</span></div>	
+            <div class="subfindfriends2Addfreinds">
+              <button class="btnC6-2">Confirm</button>
+              <button class="btnC6-3">Delete</button>
+            </div>
+      </div>
+       <div class="subfindfriends2">
+            <div class="subfindfriends2profile Img11"></div>
+            <div class="NamesubFriens2"><span>Vamy gautam</span></div>	
+            <div class="subfindfriends2Addfreinds">
+              <button class="btnC6-2">Confirm</button>
+              <button class="btnC6-3">Delete</button>
+            </div>
+      </div>
+       <div class="subfindfriends2">
+            <div class="subfindfriends2profile Img12"></div>
+            <div class="NamesubFriens2"><span>Mr. Bean</span></div>	
+            <div class="subfindfriends2Addfreinds">
+              <button class="btnC6-2">Confirm</button>
+              <button class="btnC6-3">Delete</button>
+            </div>
+      </div>
+       <div class="subfindfriends2">
+            <div class="subfindfriends2profile Img13"></div>
+            <div class="NamesubFriens2"><span>Rocky handsome</span></div>	
+            <div class="subfindfriends2Addfreinds">
+              <button class="btnC6-2">Confirm</button>
+              <button class="btnC6-3">Delete</button>
+            </div>
+      </div>
+
+      <div class="subfindfriends2">
+            <div class="subfindfriends2profile Img14"></div>
+            <div class="NamesubFriens2"><span>Angle Priya</span></div>	
+            <div class="subfindfriends2Addfreinds">
+              <button class="btnC6-2">Confirm</button>
+              <button class="btnC6-3">Delete</button>
+            </div>
+      </div>
+
+      <div class="subfindfriends2">
+            <div class="subfindfriends2profile Img15"></div>
+            <div class="NamesubFriens2"><span>Rechard baton</span></div>	
+            <div class="subfindfriends2Addfreinds">
+            <button class="btnC6-2">Confirm</button>
+            <button class="btnC6-3">Delete</button>
+          </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+<div class="container4">
+	<div class="slider1">
+   <h2><img src="https://cdn-icons-png.flaticon.com/128/3135/3135715.png" width="9%"> Suhail hasan</h2>
+   <h3 onclick="container6toggle()"><img src="https://cdn-icons-png.flaticon.com/128/2024/2024079.png" width="9%"> Friends</h3>
+   <h3><img src="https://cdn-icons-png.flaticon.com/128/4807/4807598.png" width="9%" > Groups</h3>
+   <h3><img src="https://cdn-icons-png.flaticon.com/128/6133/6133741.png" width="9%">  Memories</h3>
+   <h3><img src="https://cdn-icons-png.flaticon.com/128/489/489707.png" width="9%"> Saved</h3>
+   <h3><img src="https://cdn-icons-png.flaticon.com/128/1179/1179069.png" width="9%"> video</h3>
+   <h3><img src="https://cdn-icons-png.flaticon.com/128/8890/8890274.png" width="9%"> Market place</h3>
+   <h3><img src="https://cdn-icons-png.flaticon.com/128/9423/9423143.png" width="9%"> Feeds</h3>
+   <h3><img src="https://cdn-icons-png.flaticon.com/128/1968/1968779.png" width="9%"> Events</h3>
+   <h3><img src="https://cdn-icons-png.flaticon.com/128/610/610128.png" width="9%"> Ads manager</h3>
+   <h3><img src="https://cdn-icons-png.flaticon.com/128/1312/1312479.png" width="9%"> Fundraisers</h3>
+   
+   <div class="seemore">
+   	  <h3><img src="https://cdn-icons-png.flaticon.com/128/3991/3991771.png" width="9%"> Birthday</h3>
+   	  <h3><img src="https://cdn-icons-png.flaticon.com/128/5654/5654957.png" width="9%"> Climate Science Center</h3>
+   	  <h3><img src="https://cdn-icons-png.flaticon.com/128/264/264672.png" width="9%"> Facebook pay</h3>
+   	  <h3><img src="https://cdn-icons-png.flaticon.com/128/1374/1374723.png" width="9%"> Gaming video</h3>
+   	  <h3><img src="https://cdn-icons-png.flaticon.com/128/889/889101.png" width="9%"> Messenger</h3>
+   	  <h3><img src="https://cdn-icons-png.flaticon.com/128/5968/5968771.png" width="9%"> Messenger kids</h3>
+   	  <h3><img src="https://cdn-icons-png.flaticon.com/128/11820/11820184.png" width="9%"> Pages</h3>
+   	  <h3><img src="https://cdn-icons-png.flaticon.com/128/2991/2991377.png" width="9%"> Play games</h3>
+   	  <h3><img src="https://cdn-icons-png.flaticon.com/128/1032/1032750.png" width="9%"> Recent ad activity</h3>
+   	  <h3><img src="https://cdn-icons-png.flaticon.com/128/11820/11820224.png" width="9%"> Reels</h3>
+   </div>
+   <h3 id="seemore1" onclick="C4Seemore()"><img style="background:lightgray; border-radius:50%; padding:0.5vw;" src="https://cdn-icons-png.flaticon.com/128/2985/2985150.png" width="5%"> See more</h3>
+   <h3 id="seeless" onclick="C4Seeless()"><img style="background:lightgray; border-radius:50%; padding:0.5vw;" src="https://cdn-icons-png.flaticon.com/128/6993/6993196.png" width="5%"> See less</h3>
+	</div>
+		<div class="middlehome">
+			<div class="whatandlive">
+         <div class="whatsyourmind">
+           <h3><i class="fa-solid fa-user-plus"></i> <input type="text" placeholder="What's on your mind, Suhail"></h3>
+         </div><br><br><br><br>
+         <hr width="95%">
+        <div class="livevideo">
+        	<span><img src="https://static.xx.fbcdn.net/rsrc.php/v4/yr/r/c0dWho49-X3.png" width="22%"> live video</span><span><img src="https://static.xx.fbcdn.net/rsrc.php/v4/y7/r/Ivw7nhRtXyo.png" width="22%"> pic/video</span><span><img src="https://static.xx.fbcdn.net/rsrc.php/v4/yd/r/Y4mYLVOhTwq.png" width="22%"> Feel/actty</span>
+       </div>
+      </div>
+      <div class="creatstory">
+      	<div class="creatstory1">
+         <div class="plusicone">
+            <img src="https://cdn-icons-png.flaticon.com/128/1828/1828817.png" width="100%" height="100%">
+         </div>
+         <div class="creates">
+           <h1 style="height:15%; margin-top:-1%;">Create story</h1>
+           <span style="color:gray; font-size:1.8vw;">Share a photo or write something</span>
+         </div>
+       </div>
+      </div>
+      <div class="nomoreposts">
+        <h1>No more posts</h1>
+        <p>Add more friends to see more posts in your feed.</p>
+        <button style="background-color: blue; padding:0.7vw; border-radius:1vw; color:white;" type="button">Find friends</button>
+      </div>
+      <div class="blank1"></div>
+		</div>
+			<div class="rtbarslid">
+        
+		</div>
+   </div>
+
+   <!-----------------checkmassenger -------------------->
+
+<div class="container5" id="container5">
+	<div class="rtbarslid">
+        <span style="color:black;">Chats</span>
+        <span>
+          <span onclick="ChatsettingT()"><img src="https://cdn-icons-png.flaticon.com/128/570/570223.png" width="7%"></span>
+          <span style="color:black;"><img src="https://cdn-icons-png.flaticon.com/128/4159/4159820.png" width="7%"></span>
+           <span style="color:black;"><img src="https://cdn-icons-png.flaticon.com/128/2356/2356780.png" width="7%"></span>
+           <span onclick="containerR5tggl(),ChatsettingR()">&times</span>
+       </span>
+       <input type="text" placeholder="👓 Search Massenger">
+       <div class="inboxbtn1">inbox</div>
+         <div class="Massengerboxnewmassage">
+            	<div class="Massengerbox">
+            		<i class="fa-solid fa-spa"></i>
+            	</div>
+            	<div class="newmassagerequest">
+                 <h3>New massage request &nbsp &nbsp &nbsp &nbsp/ <span>From Suhail hasan</span></h3>
+                 
+            	</div>
+         </div>
+        <div class="Nomassage">
+        	<div class="Nomassageimage1">
+            <img src="https://cdn-icons-png.flaticon.com/128/15391/15391878.png" width="60%" height="70%">
+          </div>
+             <div class="Nomassagetext1">
+                 <h3 style="height:5%">No massage</h3>
+                <span style="color:black;">New massage will apear here</span>
+             </div>
+        </div>
+		</div>
+</div>
+
+<div class="Chatsetting">
+    <div class="subChatsetting">
+    <h3>Chat settings<br><span>Customize your massage experiencs</span></h3>
+    </div>
+    <hr>
+    <div class="subChatsetting">
+     <h4><label for="Fa-phone"> <i class="fa-solid fa-phone"></i> &nbsp Incoming call sounds <input type="checkbox" id="Fa-phone"></label></h4> 
+    </div>
+    <div class="subChatsetting">
+      <h4><label for="fa-volume-high"> <i class="fa-solid fa-volume-high"></i> &nbsp Massage sounds <input type="checkbox" id="fa-volume-high"></label></h4>
+    </div>
+    <div class="subChatsetting">
+       <h4><label for="Pop-up">
+        <i class="fa-solid fa-person-arrow-up-from-line"></i> &nbsp Pop up new massage 
+        <input type="checkbox" id="Pop-up"><span>Automatically open new massage</span></label></h4>
+    </div>
+    <hr>
+    <div class="subChatsetting">
+    <h4><i class="fa-solid fa-shield-halved"></i> &nbsp Privacy and safety</h4>
+    </div>
+    <hr>
+    <div class="subChatsetting">
+      <h4><i class="fa-brands fa-creative-commons-share"></i> &nbsp Active Status:ON </h4>
+    </div>
+    <div class="subChatsetting">
+      <h4><i class="fa-solid fa-comment-dots"></i> &nbsp Massage requests </h4>
+    </div>
+    <div class="subChatsetting">
+      <h4><i class="fa-solid fa-box-archive"></i> &nbsp Archived chats </h4>
+    </div>
+    <div class="subChatsetting">
+      <h4><i class="fa-solid fa-truck-ramp-box"></i> &nbsp Massage delivery settings </h4>   
+    </div>
+    <hr>
+    <div class="subChatsetting">
+      <h4><i class="fa-solid fa-prescription-bottle-medical"></i> &nbsp Restricted Accounts </h4>
+    </div>
+    <div class="subChatsetting">
+      <h4><i class="fa-solid fa-cube"></i> &nbsp Block settings </h4>
+    </div>
+</div>
+
+<!---------------------notification codes ------------------->
+
+<div class="Notification1">
+    <div class="subNotification1">
+     <h2>Notification<span><i class="fa-solid fa-ellipsis" onclick="subNotification1NotT(),subNotification3NotR()"></i></span></h2>
+    </div>
+    <div class="subNotification1-Not">
+        <span onclick="subNotification1NotR()">&times</span>
+        <h3><i class="fa-solid fa-check"> &nbsp</i><label for="123">Mark all as read<input type="checkbox" id="123">
+        </label></h3>
+        <h3><i class="fa-solid fa-gear"> &nbsp</i><label for="123-1">Notification settings<input type="checkbox" id="123-1">
+        </label></h3>
+        <h3><i class="fa-solid fa-envelope-open-text"> &nbsp</i><label for="123-2">Open settings<input type="checkbox" id="123-2">
+        </label></h3>
+    </div>
+    <div class="subNotification1">
+     <h3>All</h3> &nbsp &nbsp &nbsp &nbsp<h3>Unread</h3>
+    </div>
+    <div class="subNotification2">
+        <h3>Earlier &nbsp</h3> <h3>See all</h3>
+    </div>
+    <div class="subNotification3">
+        <div class="subNotification3-1">
+         <i class="fa-solid fa-people-group"></i>
+        </div>
+        <div class="subNotification3-2">
+         <span>you might like <big>Mithila Vlogs</big> Groups</span><br><span>4w</span>
+        </div>
+        <div class="subNotification3-3" onclick="subNotification3NotT()">
+    <i class="fa-solid fa-ellipsis"></i></div>
+    </div>
+
+     <div class="subNotification3-Not">
+        <span onclick="subNotification3NotR()">&times</span>
+        <h3><i class="fa-solid fa-check"> &nbsp</i><label for="124">Mark as unread<input type="checkbox" id="124">
+        </label></h3>
+        <h3><i class="fa-solid fa-delete-left"> &nbsp</i><label for="124-1">Delete this notification settings<input type="checkbox" id="124-1">
+        </label></h3>
+        <h3><i class="fa-solid fa-square-minus"> &nbsp</i><label for="124-2">Turn off these notifications<input type="checkbox" id="124-2">
+        </label></h3>
+        <h3><i class="fa-solid fa-bug"> &nbsp</i><label for="124-3">Report issue to notification team<input type="checkbox" id="124-3">
+        </label></h3>
+    </div>
+ 
+    <div class="subNotification4">
+        <div class="subNotification4-1">
+            <i class="fa-solid fa-user"></i>
+        </div>
+        <div class="subNotification4-2">
+        <span><big>Suhail Hasan</big> sent you a friend request</span><br><span>5w</span>
+        </div>
+        <div class="subNotification4-3" onclick="subNotification4NotT(),subNotification1NotR()"><i class="fa-solid fa-ellipsis"></i></div>
+        <div class="subNotification4-4">
+           <button class="btnC6-2">Confirm</button>
+           <button class="btnC6-3">Delete</button>
+       </div>
+    </div>
+    <div class="subNotification4-Not">
+        <span onclick="subNotification4NotR()">&times</span>
+        <h3><i class="fa-solid fa-check"> &nbsp</i><label for="124">Mark as unread<input type="checkbox" id="124">
+        </label></h3>
+        <h3><i class="fa-solid fa-delete-left"> &nbsp</i><label for="124-1">Delete this notification settings<input type="checkbox" id="124-1">
+        </label></h3>
+        <h3><i class="fa-solid fa-square-minus"> &nbsp</i><label for="124-2">Turn off these notifications<input type="checkbox" id="124-2">
+        </label></h3>
+        <h3><i class="fa-solid fa-bug"> &nbsp</i><label for="124-3">Report issue to notification team<input type="checkbox" id="124-3">
+        </label></h3>
+    </div>
+    <div class="subNotification3 NofSN3">
+        <div class="subNotification3-1 NofSN3-1">
+         <i class="fa-solid fa-shield-halved"></i>
+        </div>
+        <div class="subNotification3-2 ">
+         <span>you logged in to imagine on 3 jan 2025, 20:59 Not you? You can remove tha app.</span><span>9w</span>
+        </div>
+        <div class="subNotification3-3"><i class="fa-solid fa-ellipsis"></i></div>
+    </div>
+    <div class="subNotification3  NofSN3">
+        <div class="subNotification3-1 NofSN3-2">
+         <i class="fa-solid fa-bell"></i>
+        </div>
+        <div class="subNotification3-2">
+         <span>you logged in to imagine on 3 jan 2025, 20:59 Not you? You can remove tha app.</span><span>9w</span>
+        </div>
+        <div class="subNotification3-3"><i class="fa-solid fa-ellipsis"></i></div>
+    </div>
+</div>
+
+<!----------------------@media query 430px ------------------>
+<div class="horizontalline2">
+<hr size="5px" color="gray">
+</div>
+<div class="containerM4">
+		<div class="scroll-containerM4">
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
+	</div>
+	  <div class="containerM5">
+	    <div class="creates1">
+           <h3 style="height:5%; margin-top:-1%;">Create story</h3>
+           <span >Share a photo or write something</span>
+         </div>
+        <div class="nomoreposts1">
+         <h3 style="height:5%">No more posts</h3>
+          <p>Add more friends to see more posts in your feed.</p>
+         <button style="background-color: blue; padding:0.7vw; border-radius:1vw; color:white;" type="button">Find friends</button>
+       </div>
+      </div>
+
+<div class="container2">
+ <i class="fa-solid fa-arrow-left" onclick="container2TR()"> &nbsp  &nbsp   Back</i>
+   <div class="subcontainer2-1">
+     <h3>Menu<i class="fa-solid fa-gear" onclick="heightIsubcontainer2()"></i></h3>
+   </div>
+   <div class="subcontainer2-2">
+    <div class="NameUser">
+      <div class="ProfileI"></div>
+      <div class="ProfileI1">
+        <h2>Suhail Hasan</h2>
+      </div>
+      <div class="ProfileI2"><i class="fa-solid fa-angle-down"></i></div>
+    </div>
+    <div class="horizontallineC2">
+    <hr>
+  </div>
+    <div class="Createanother">
+      <div class="PlusI"><i class="fa-solid fa-plus"></i></div>
+      <div class="PlusI1" onclick="CreateanotherofformT()"> <h2>Create another profile</h2></div>
+    </div>
+  </div>
+  <div class="Createanotherofform">
+    <h3>Please submit your form</h3>
+    <input type="text" placeholder="Name"><br>
+    <input type="text" placeholder="profession.."><br>
+    <input type="email" placeholder="Email"><br>
+    <input type="password" placeholder="Password"><br>
+    <input type="Submit" placeholder="Submit"><br>
+
+  </div>
+  <div class="MemoSavGr">
+    <div class="MemoriesC2">
+      <h3><img src="https://cdn-icons-png.flaticon.com/128/3997/3997691.png" width="20%"> Memories</h3>
+    </div>
+    <div class="MemoriesC2">
+      <h3><img src="https://cdn-icons-png.flaticon.com/128/5667/5667029.png" width="20%"> Saved</h3>
+    </div>
+    <div class="MemoriesC2">
+       <h3><img src="https://cdn-icons-png.flaticon.com/128/4144/4144517.png" width="20%">&nbsp Groups</h3>
+    </div>
+    <div class="MemoriesC2">
+    <h3><img src="https://cdn-icons-png.flaticon.com/128/5659/5659427.png" width="20%">&nbsp Video</h3>
+    </div>
+    <div class="MemoriesC2">
+      <h3><img src="https://cdn-icons-png.flaticon.com/128/9710/9710692.png" width="20%">&nbsp Marketplace</h3>
+    </div>
+    <div class="MemoriesC2">
+      <h3><img src="https://cdn-icons-png.flaticon.com/128/2024/2024079.png" width="20%"> Friends</h3>
+    </div>
+    <div class="MemoriesC2">
+      <h3><img src="https://cdn-icons-png.flaticon.com/128/1057/1057929.png" width="20%"> &nbsp Feads</h3>
+    </div>
+    <div class="MemoriesC2">
+      <h3><img src="https://cdn-icons-png.flaticon.com/128/1968/1968779.png" width="20%">&nbsp Events</h3>
+    </div>
+    
+  </div>
+   <div class="subcontainer2">
+   	<div class="parameterBright"><h3> &nbsp Brightness</h3><input type="range" min="0.1" max="2" step="0.1" value="1" id="brightnessRange"></div>
+   	<div class="acb"><h3>Dark<big>/</big>theme</h3></div>
+      <div class="container"><h3>Light </h3><h3> Dark</h3>
+        <div id="slider" class="slider" onclick="sliderMoveDarkLight()"></div>
+      </div>
+   </div>
+
+</div>
+<script>
+  var range = document.getElementById('brightnessRange');
+  range.addEventListener('input', function(){
+    var brightnessValue = range.value;
+    document.body.style.filter = `brightness(${brightnessValue})`;
+    document.body.style.color ="black"
+  });
+</script>
+
+<div class="container1">
+	<div class="sidebar">
+    <span onclick="toggleRsidebar(),removeR(),playSound()">&times</span>
+    <div><h1>you can try a sidebar</h1>
+    </div>
+			<div>
+				<img src="https://plus.unsplash.com/premium_photo-1664474619075-644dd191935f?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8aW1hZ2V8ZW58MHx8MHx8fDA%3D" width="100%" height="30%">
+			</div>
+			<div class="menubar">
+			<ul>
+				<li onclick="container2T()"><i class="fa-solid fa-circle-user"></i>User <i style="float: right; color:red;" class="fa-solid fa-arrow-right"></i></li>
+				<hr color="white" size="1px" width="90%">
+			<li><i class="fa-solid fa-table-columns"></i>Deshboard<i style="float: right; color:red;" class="fa-solid fa-arrow-right"></i></li>
+			<hr color="white" size="1px" width="90%">
+				<li><i class="fa-solid fa-file"></i>File<i style="float: right; color:red;" class="fa-solid fa-arrow-right"></i></li>
+				<hr color="white" size="1px" width="90%">
+				<li><i class="fa-solid fa-envelope"></i>Gmail<i style="float: right; color:red;" class="fa-solid fa-arrow-right"></i></li>
+				<hr color="white" size="1px" width="90%">
+				<li><i class="fa-solid fa-gear"></i>Settings<i style="float: right; color:red;" class="fa-solid fa-arrow-right"></i></li>
+				<hr color="white" size="1px" width="90%">
+			</ul>
+
+			<a href="https://www.linkedin.com/in/suhail-hasan-b842a1197?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"> <i class="fa-brands fa-linkedin"></i></a>
+
+			<a href="https://x.com/Sikande77988229?s=09"><i class="fa-brands fa-twitter"></i></a>
+
+			<a href="https://www.instagram.com/suhailhasan74?igsh=N24xNjZvNmM0OHY3&utm_source=ig_contact_invite"><i class="fa-brands fa-instagram"></i></a>
+		</div>
+	</div>
+</div>
+<div class="UserContainer8" id="scrollContainer8">
+   <div class="Container8" id="Container8">
+      <div class="SideC8">
+          <h2>Groups
+            <i style="float:right;" class="fa-solid fa-magnifying-glass"></i>
+            <i style="float:right;" class="fa-solid fa-gear" onclick="settingsofgroupsT()" ></i>
+            <i style="float:right;" class="fa-solid fa-gear" onclick="showC8(9)"></i></h2>
+          
+          <div class="settingsofgroups">
+              <h3>Notification settings<br><span>You can manage how are notified about group updates</span></h3>
+              <h3>
+                <label for="g12"><i class="fa-solid fa-circle-notch"></i> Show notification dots
+                 <input type="checkbox" id="g12">
+                </label>
+             </h3>
+
+              <h3>
+                <label for="g13"><i class="fa-solid fa-gear"></i> Customise notifications
+                 <input type="checkbox" id="g13">
+                </label>
+             </h3>
+             <hr>
+
+             <h3>
+                Manage groups <br><span>you can manage all of the groups that you are a <br> members of at once.</span>
+             </h3>
+             <h3>
+                <label for="g14"><i class="fa-solid fa-thumbtack"></i> pins <input type="checkbox" id="g14"><br><span>pin your favorite groups for quick access.</span>
+                </label>
+             </h3>
+             <h3>
+                <label for="g15"><i class="fa-solid fa-kit-medical"></i> Followings <input type="checkbox" id="g15"><br><span>Follow or unfollow gruops to control what you see <br>in News feed</span>
+                </label>
+             </h3>
+             <h3>
+                <label for="g16"><i class="fa-solid fa-right-from-bracket"></i> Membership <input type="checkbox" id="g16"><br><span>Leave groups that no longer interest you. </span>
+                </label>
+             </h3>
+          </div>
+
+          <span>Discover</span><br><br>
+          <input type="text" placeholder="  ✔   Search groups">
+          <br><br>
+          <hr>
+          <div class="headingC8h3">
+
+              <h3><i class="fa-solid fa-pager"></i>  Your Feed <i class="fa-solid fa-angle-right"></i></h3>
+              <h3 onclick="showC8(9)"><i class="fa-solid fa-map"></i>  Discover<i class="fa-solid fa-angle-right"></i></h3>
+              <h3 onclick="showC8(10)"><i class="fa-solid fa-people-group"></i>  Your groups<i class="fa-solid fa-angle-right"></i></h3>
+              <button onclick="showC8(11)"><i class="fa-solid fa-plus"></i> Create New Groups</button>
+              <h3>Groups you've joined <span onclick="Groups1show()">See all</span></h3>
+          </div>
+
+          <div class="Groups1">
+              <hr>
+               <h3>Suggest for you</h3>
+               <div class="subSuggest1">
+                   <div class="subSuggest">
+                      <div class="subSuggestimage SSest1I"></div>
+                      <div class="subSuggestcontent">
+                          <h3>Love murmu <br><span>Public group 2M<br> members</span></h3>
+                      </div>
+                      <div class="subSuggestjoin">
+                          <button>join</button>
+                      </div>
+                   </div>
+                      
+                      <div class="subSuggest">
+                      <div class="subSuggestimage SSest1I1"></div>
+                      <div class="subSuggestcontent">
+                          <h3>Leela bai <br><span>Public group 1.1M<br> members</span></h3>
+                      </div>
+                      <div class="subSuggestjoin">
+                          <button>join</button>
+                      </div>
+                   </div>
+
+                   <div class="subSuggest">
+                      <div class="subSuggestimage SSest1I2"></div>
+                      <div class="subSuggestcontent">
+                          <h3>Mujhse dosti karo <br><span>Public group 2M<br> members</span></h3>
+                      </div>
+                      <div class="subSuggestjoin">
+                          <button >join</button>
+                      </div>
+                   </div>
+
+                   <div class="subSuggest">
+                      <div class="subSuggestimage SSest1I3"></div>
+                      <div class="subSuggestcontent">
+                          <h3>Engineer bro <br><span>Public group 279k<br> members</span></h3>
+                      </div>
+                      <div class="subSuggestjoin">
+                          <button>join</button>
+                      </div>
+                   </div>
+
+                   <div class="subSuggest">
+                      <div class="subSuggestimage SSest1I4"></div>
+                      <div class="subSuggestcontent">
+                          <h3>Angle priya <br><span>Public group 2M<br> members</span></h3>
+                      </div>
+                      <div class="subSuggestjoin">
+                          <button>join</button>
+                      </div>
+                   </div>
+
+                   <div class="subSuggest">
+                      <div class="subSuggestimage SSest1I5"></div>
+                      <div class="subSuggestcontent">
+                          <h3>Manisha <br><span>Public group 2.5M<br> members</span></h3>
+                      </div>
+                      <div class="subSuggestjoin">
+                          <button>join</button>
+                      </div>
+                   </div>
+
+                   <div class="subSuggest">
+                      <div class="subSuggestimage SSest1I6"></div>
+                      <div class="subSuggestcontent">
+                          <h3>Muskan <br><span>Public group 1M<br> members</span></h3>
+                      </div>
+                      <div class="subSuggestjoin">
+                          <button>join</button>
+                      </div>
+                   </div>
+
+                   <div class="subSuggest">
+                      <div class="subSuggestimage SSest1I7"></div>
+                      <div class="subSuggestcontent">
+                          <h3>shri khatushyam <br><span>Public group 409k<br> members</span></h3>
+                      </div>
+                      <div class="subSuggestjoin">
+                          <button>join</button>
+                      </div>
+                   </div>
+
+                   <div class="subSuggest">
+                      <div class="subSuggestimage SSest1I8"></div>
+                      <div class="subSuggestcontent">
+                          <h3>vanshika piyari <br><span>Public group 2.5M<br> members</span></h3>
+                      </div>
+                      <div class="subSuggestjoin">
+                          <button>join</button>
+                      </div>
+                   </div>
+
+                   <div class="subSuggest">
+                      <div class="subSuggestimage SSest1I9"></div>
+                      <div class="subSuggestcontent">
+                          <h3>Acha SUNO <br><span>Public group 85k<br> members</span></h3>
+
+                      </div>
+                      <div class="subSuggestjoin">
+                          <button>join</button>
+                      </div>
+                   </div>
+
+               </div>
+          </div>
+      </div>
+
+
+       <div class="Recentactivity">
+
+         <div>
+            <h3>Recent activity</h3>
+             <div>
+                 <i class="fa-solid fa-images"></i>
+                 <br><br>
+                 <h3>you've completely caught up<br><span>check again later for more updates</span></h3>
+                 <br>
+                 <button>Discover more groups</button>
+             </div>
+         </div>
+       </div>
+   </div>
+   <div class="Container8" id="Container9">
+    <div class="SideC8">
+        <div class="C9groups">
+            <h2><i class="fa-solid fa-angle-left" onclick="backC8()"></i> Groups<i style="float:right;" class="fa-solid fa-gear" onclick="settingsofgroupsT()" ></i></h2>
+
+            <input type="text" placeholder="  ✔   Search groups">
+           <br><br>
+           <hr>
+            <div class="headingC8h3" id="C9headings">
+
+              <h3 onclick="backC8()"><i class="fa-solid fa-pager"></i>  Your Feed <i class="fa-solid fa-angle-right"></i></h3>
+
+              <h3><i class="fa-solid fa-map"></i>  Discover<i class="fa-solid fa-angle-right"></i></h3>
+              <h3 onclick="showC8(10)"><i class="fa-solid fa-people-group"></i>  Your groups<i class="fa-solid fa-angle-right"></i></h3>
+              <button onclick="showC8(11)"><i class="fa-solid fa-plus"></i> Create New Groups</button>
+              <h3>Groups you've joined <span onclick="Groups1show()">See all</span></h3>
+          </div>
+        </div>
+        <div class="MobGroupsetting">
+            <h2><i class="fa-solid fa-angle-left" onclick="backC8()"></i>  Group settings</h2>
+            <div class="firstImageC9"></div>
+            <h3>
+                <label for="Mg1"><i class="fa-solid fa-envelopes-bulk"></i> Invites <input type="checkbox" id="Mg1"><br><span>Send, accept and manage invites to groups</span></label></h3>
+                <h3>
+                <label for="Mg2"><i class="fa-solid fa-bell"></i>  Notification <input type="checkbox" id="Mg2"><br><span>Edit preferences for receiving notifications.</span></label></h3>
+                <h3>
+                <label for="Mg3"><i class="fa-solid fa-thumbtack"></i>  pinned groups <input type="checkbox" id="Mg3"><br><span>Pin your favorite groups for quick access.</span></label></h3>
+                <h3>
+                <label for="Mg4"><i class="fa-solid fa-kit-medical"></i>  Following <input type="checkbox" id="Mg4"><br><span>Follow or unfollow groups to control what you see <br>in News Feed.</span></label></h3>
+                <h3>
+                <label for="Mg5"><i class="fa-solid fa-arrow-right-from-bracket"></i>  Membership <input type="checkbox" id="Mg5"><br><span>Leave groups that no longer interest you.</span></label></h3>
+        </div>
+    </div>
+       <div class="MoresuggestionC9">
+           <div class="MProfileC9">
+               <div class="ProfileC9Image MPC9I"></div>
+               <div class="Moresugestcontent">
+                   <h3>You-and-Me,,❤😎  <br><span>32k members ' 10+ posts a day</span></h3>
+               </div>
+               <div class="Moresugestbutton"><button>Join group</button></div>
+           </div>
+           <div class="MProfileC9">
+               <div class="ProfileC9Image MPC9I1"></div>
+               <div class="Moresugestcontent">
+                   <h3>😍😍 Laagi 😍 tumse Man ki lagan,,❤😎  <br><span>10k members ' 10+ posts a day</span></h3>
+               </div>
+               <div class="Moresugestbutton"><button>Join group</button></div>
+           </div>
+           <div class="MProfileC9">
+               <div class="ProfileC9Image MPC9I2"></div>
+               <div class="Moresugestcontent">
+                   <h3>😍😍 ''Memes,,,''❤😎  <br><span>125k members ' 10+ posts a day</span></h3>
+               </div>
+               <div class="Moresugestbutton"><button>Join group</button></div>
+           </div>
+           <div class="MProfileC9">
+               <div class="ProfileC9Image MPC9I3"></div>
+               <div class="Moresugestcontent">
+                   <h3> 😈😈😈😈😈''narak lok,,,'' <br><span>125k members ' 10+ posts a day</span></h3>
+               </div>
+               <div class="Moresugestbutton"><button>Join group</button></div>
+           </div>
+           <div class="MProfileC9">
+               <div class="ProfileC9Image MPC9I4"></div>
+               <div class="Moresugestcontent">
+                   <h3> 😣😣😣😣khamoshiyan -- 😌😌😌😌<br><span>125k members ' 10+ posts a day</span></h3>
+               </div>
+               <div class="Moresugestbutton"><button>Join group</button></div>
+           </div>
+           <div class="MProfileC9">
+               <div class="ProfileC9Image MPC9I5"></div>
+               <div class="Moresugestcontent">
+                   <h3>🤣🤣🤣🤣🤣 sabka katega😘😘😘😘😘<br><span>125k members ' 10+ posts a day</span></h3>
+               </div>
+               <div class="Moresugestbutton"><button>Join group</button></div>
+           </div>
+           <div class="MProfileC9">
+               <div class="ProfileC9Image MPC9I6"></div>
+               <div class="Moresugestcontent">
+                   <h3> Coud be --- ===us=== <br><span>125k members ' 10+ posts a day</span></h3>
+               </div>
+               <div class="Moresugestbutton"><button>Join group</button></div>
+           </div>
+           <div class="MProfileC9">
+               <div class="ProfileC9Image MPC9I7"></div>
+               <div class="Moresugestcontent">
+                   <h3> 😈😈😈😈😈''Meme boys--- and === girls,,,'' <br><span>125k members ' 10+ posts a day</span></h3>
+               </div>
+               <div class="Moresugestbutton"><button>Join group</button></div>
+           </div>
+        </div>
+   </div>
+
+
+   <div class="Container8" id="Container10">
+    <div class="SideC8">
+        <div class="C9groups">
+            <h2><i class="fa-solid fa-angle-left" onclick="showC8(9)"></i> Groups<i style="float:right;" class="fa-solid fa-gear" onclick="settingsofgroupsT()" ></i></h2>
+            <input type="text" placeholder="  ✔   Search groups">
+           <br><br>
+           <hr>
+            <div class="headingC8h3" id="C10headings">
+
+              <h3 onclick="showC8(8)"><i class="fa-solid fa-pager"></i>  Your Feed <i class="fa-solid fa-angle-right"></i></h3>
+
+              <h3 onclick="showC8(9)"><i class="fa-solid fa-map"></i>  Discover<i class="fa-solid fa-angle-right"></i></h3>
+              <h3 onclick="showC8(10)"><i class="fa-solid fa-people-group"></i>  Your groups<i class="fa-solid fa-angle-right"></i></h3>
+              <button onclick="showC8(11)"><i class="fa-solid fa-plus"></i> Create New Groups</button>
+              <h3>Groups you've joined <span onclick="Groups1show()">See all</span></h3>
+          </div>
+        </div>
+    </div>
+       <div class="ACHASUNO">
+           <h3>&nbsp &nbsp All groups you've joined (1)</h3>
+           <div class="ACHASUNO1">
+               <div class="ACHASUNOIm"></div>
+               <div class="ACHASUNOcontent">
+                   <h3>ACHA SUNO<br><span>you last visited<br>6 hours ago</span></h3>
+               </div>
+               <div class="ACHASUNOButton">
+                   <button>View group</button>
+               </div>
+               <div class="ACHASUNOthreedots">
+                   <i class="fa-solid fa-ellipsis"></i>
+               </div> 
+           </div>
+       </div>
+   </div>
+   <div class="Container8" id="Container11">
+    <div class="Creatgroups">
+        <h1><i class="fa-solid fa-angle-left" onclick="backC8()"></i> <span>Groups > Create groups</span><br>Create group</h1>
+        <h2><i class="fa-regular fa-user"></i> Suhail hasan<br><span>Admin</span></h2>
+        <input type="text" placeholder=" Group name"><br>
+        <input type="text" placeholder=" Choose privacy"><br>
+        <input type="text" placeholder=" Invite friends (optional)"><br>
+        <input type="Submit" value="Create groups" >
+    </div>
+
+     
+       <div class="Desktoppreview">
+           <h3>Desktop preview</h3>
+           <div class="underDesktoppreview">
+               <div class="DesktopIm"></div>
+               <div class="Desktopcontent">
+                   <h1>Group Name<br><span>Group privacy . 1 members</span></h1>
+                   <hr>
+                  <h3> &nbsp <span> About</span><span> &nbsp &nbsp posts</span><span> &nbsp &nbsp Members</span><span> &nbsp &nbsp Events</span></h3>
+                  <br>
+                  <div class="Desktopcontent1">
+                      <h2>About</h2>
+                      <br>
+                      <h2><i class="fa-solid fa-circle-user"></i> What's your mind<br><br><input type="text" placeholder="What's your mind"><br><br>
+                        <span>🎆 🎆 photo/video</span><span>🎁 🎁 Tag people</span><span>😂 😂 Feelings/Activity</span></h2>
+                  </div>
+               </div>
+
+           </div>
+       </div>
+
+    </div>
+</div>
+
+<script type="text/javascript">
+  /* document.getElementById("scrollContainer8").addEventListener("wheel", function(event) {
+    event.preventDefault(); // Default vertical scroll ko rokne ke liye
+    this.scrollLeft += event.deltaY; // Mouse wheel ke movement ko horizontal scroll me convert karne ke liye
+});
+
+</script>
+
+<script type="text/javascript">
+         btnSizeIncrease();
+         subfindfriends2profileADD();
+         nanbarF1();
+    </script>
+<script>
+	function togglesidebar()
+    {
+    document.getElementsByClassName('container1')[0].classList.toggle('active');
+    }
+    function toggleRsidebar()
+    {
+    document.getElementsByClassName('container1')[0].classList.remove('active');
+    }
+    
+function remove() {
+    var a = document.getElementsByTagName('button')[0];
+    a.classList.toggle("hidden"); // Hidden class toggle karega
+}
+
+function removeR() {
+    var a = document.getElementsByTagName('button')[0];
+    a.classList.toggle("hidden"); // Wapas show/hide toggle karega
+}
+
+    </script>
+    
+</body>
+</html>
