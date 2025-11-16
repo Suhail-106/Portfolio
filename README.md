@@ -92,11 +92,9 @@ set EMAIL_PASS="your_app_password"  Go to -> 'Inner directory of settings.py` li
 
 ### Step 3 – Set Email in `views.py`
 
-Go to `maincontainer` → Function `user_login` → Line **640** → Add your email.  
-Go to `maincontainer` -> Function `add_address` -> **853** -> Add your email. For product information and user address to gave to personal mail.  
-Go to `maincontainer` -> Function `add_address` -> **854** Add you personal mail. For product information and user address take in personal mail.  
-Last step `maincontainer` -> Function `add_address -> **862** Add your mail for gave confirmation and informaiton of product to user.   
-
+Go to `myportfolio` → Function `login_user` → Line **92** → Add your email.  
+Go to `myportfolio` -> Function `verify_otp` -> **136** -> Add your email. For my personal information and send my resume to the recruiter.    
+ 
 ---
 
 ## 🔑 Django Admin Credentials
@@ -112,8 +110,6 @@ Password: back1234
 
 * Register/Login users
 * OTP verification
-* Product browsing (if included)
-
 ---
 
 ## 🤝 Acknowledgements
