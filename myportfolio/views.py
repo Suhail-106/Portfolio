@@ -133,7 +133,7 @@ def verify_otp(request):
                 mail = EmailMessage(
                     subject='✅ Your file is ready to download',
                     body=f"Hello {user.username if user.is_authenticated else 'User'},\n\nYour OTP verification was successful!\nPlease find your file attached below.\n\nThank you!",
-                    from_email=''#Add your mail,
+                    from_email='',#Add your mail,
                     to=[email],
                 )
                 mail.attach_file(file_path)  # ✅ attach the file
